@@ -32,7 +32,7 @@ class SignWidget extends StatelessWidget {
               //Sign In/Out principal (primeira palavra)
               Text(
                 textSignMain,
-                style: cTitleText,
+                style: cTitleSecond,
               ),
 
               const SizedBox(

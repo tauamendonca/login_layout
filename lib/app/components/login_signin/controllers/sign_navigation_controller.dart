@@ -28,6 +28,7 @@ signUp(formKey) async {
 navigateTo(formKey, context, whereTo) {
   login(formKey);
   if (formKey.currentState!.validate()) {
+    //na teoria se fosse um login deveria ser o push replacement e ter um botão específico para voltar
     return Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => whereTo),
@@ -36,7 +37,7 @@ navigateTo(formKey, context, whereTo) {
 }
 
 navigateSimple(context, whereTo) {
-  return Navigator.push(
+  return Navigator.pushReplacement(
     context,
     MaterialPageRoute(builder: (context) => whereTo),
   );

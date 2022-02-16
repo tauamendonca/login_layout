@@ -33,6 +33,7 @@ class _CustomCheckboxState extends State<CustomCheckbox> {
         //checkbox redonda
         Checkbox(
           //layout
+          visualDensity: const VisualDensity(horizontal: -3),
           checkColor: cColorCheck,
           side: const BorderSide(color: cColorPrimary, width: 2),
           shape: RoundedRectangleBorder(
@@ -48,18 +49,26 @@ class _CustomCheckboxState extends State<CustomCheckbox> {
           },
         ),
 
-        //texto de Remember me / Termos de compromisso
+        //textos do checkbox
         RichText(
           text: TextSpan(
-            //Texto inicial após o Checkbox
+            //Texto - "Remember me" / "I agree to the"
             text: widget.textFirst,
-            style: cText1,
+            style: cTextCheckbox,
             children: [
+              //Texto - "Terms of Service"
               TextSpan(
                 text: widget.textTwo,
-                style: cText1,
+                style: cTextLink,
               ),
-              TextSpan(text: widget.textTree, style: cText1),
+
+              //Texto "and"
+              TextSpan(
+                text: widget.textTree,
+                style: cTextCheckbox,
+              ),
+
+              //Texto - "Privacy Policy"
               TextSpan(
                 text: widget.textFour,
                 style: cTextLink,

@@ -23,96 +23,87 @@ class LoginPage extends StatelessWidget {
       extendBodyBehindAppBar: true,
 
       //Body
-      body: SingleChildScrollView(
-        child: Container(
-          constraints: BoxConstraints(
-            maxHeight: MediaQuery.of(context).size.height,
-            maxWidth: MediaQuery.of(context).size.width,
+      body: Stack(
+        children: [
+          Image.asset(
+            cImage,
+            fit: BoxFit.fitWidth,
           ),
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/images/background.jpg"),
-                fit: BoxFit.cover),
-          ),
-          child: Column(
-            children: [
-              Expanded(flex: 2, child: Column()),
-              Expanded(
-                flex: 5,
-                child: Container(
-                  width: double.infinity,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(40),
-                      topRight: Radius.circular(40),
-                    ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 30),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        //Título
-                        Text(
-                          "Welcome Back",
-                          style: cText1,
-                        ),
-
-                        const SizedBox(
-                          height: 30,
-                        ),
-
-                        //Formulário
-                        Form(
-                          key: _formKey,
-                          child: Column(
-                            children: [
-                              CustomFieldText(
-                                // key: _formKey,
-                                hintText: "E-mail",
-                                validator: (value) {
-                                  return validateEmail(value);
-                                },
-                              ),
-                              CustomFieldText(
-                                // key: _formKey,
-                                hintText: "Password",
-                                obscureText: true,
-                                validator: (value) {
-                                  return validatePassword(value);
-                                },
-                              ),
-                              const CustomCheckbox(
-                                textFirst: "Remember me",
-                                width: 30,
-                                textLink: "Forgot password?",
-                              ),
-                            ],
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 30,
-                        ),
-                        SignWidget(
-                          textSignMain: "Sign In",
-                          textSignSecond: "Sign Up",
-                          onTap: () {
-                            navigateSimple(context, SignUpPage());
-                          },
-                          onPressed: () {
-                            navigateTo(_formKey, context, const HomePage());
-                          },
-                        ),
-                      ],
-                    ),
-                  ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              height: MediaQuery.of(context).size.height * 0.65,
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(40),
+                  topRight: Radius.circular(40),
                 ),
               ),
-            ],
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    //Título
+                    Text(
+                      "Welcome Back",
+                      style: cTitleText,
+                    ),
+
+                    const SizedBox(
+                      height: 30,
+                    ),
+
+                    //Formulário
+                    Form(
+                      key: _formKey,
+                      child: Column(
+                        children: [
+                          CustomFieldText(
+                            // key: _formKey,
+                            hintText: "E-mail",
+                            validator: (value) {
+                              return validateEmail(value);
+                            },
+                          ),
+                          CustomFieldText(
+                            // key: _formKey,
+                            hintText: "Password",
+                            obscureText: true,
+                            validator: (value) {
+                              return validatePassword(value);
+                            },
+                          ),
+                          const CustomCheckbox(
+                            textFirst: "Remember me",
+                            width: 30,
+                            textLink: "Forgot password?",
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    SignWidget(
+                      textSignMain: "Sign In",
+                      textSignSecond: "Sign Up",
+                      onTap: () {
+                        navigateSimple(context, SignUpPage());
+                      },
+                      onPressed: () {
+                        navigateTo(_formKey, context, const HomePage());
+                      },
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

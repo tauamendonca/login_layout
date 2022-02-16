@@ -24,18 +24,22 @@ class CustomFieldText extends StatelessWidget {
       validator: validator,
       key: key,
       obscureText: obscureText,
+      textAlignVertical: TextAlignVertical.bottom,
       decoration: InputDecoration(
-        contentPadding: const EdgeInsets.symmetric(vertical: 8),
+        contentPadding: const EdgeInsets.symmetric(vertical: 12),
         hintText: hintText,
-        hintStyle: cText1,
+        hintStyle: cTextBasic,
+        focusedBorder: const UnderlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.green,
+          ),
+        ),
         enabledBorder: const UnderlineInputBorder(
           borderSide: BorderSide(
             color: cColorSecondary,
           ),
         ),
       ),
-      style: cText1,
-      textAlignVertical: TextAlignVertical.bottom,
     );
   }
 }
