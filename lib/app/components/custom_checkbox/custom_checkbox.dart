@@ -15,7 +15,7 @@ class CustomCheckbox extends StatefulWidget {
     this.textTwo,
     this.textTree,
     this.textFour,
-    this.textLink = "",
+    this.textLink = '',
     this.width,
   }) : super(key: key);
 

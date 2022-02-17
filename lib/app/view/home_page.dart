@@ -32,10 +32,9 @@ class HomePage extends StatelessWidget {
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    "Login OK!",
+                    'Login OK!',
                     style: cTitleText,
                   ),
                 ],

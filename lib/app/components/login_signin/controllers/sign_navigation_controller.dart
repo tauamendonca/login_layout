@@ -3,28 +3,29 @@
 import 'package:flutter/material.dart';
 
 //fazer login
-login(formKey) async {
+Future login(formKey) async {
   if (formKey.currentState!.validate()) {
-    print("Login realizado com sucesso");
+    print('Login realizado com sucesso');
     return formKey;
   } else {
-    print("Falha no Login, verifique com o desenvolvedor");
+    print('Falha no Login, verifique com o desenvolvedor');
     return formKey;
   }
 }
 
 //registrar usuário
-signUp(formKey) async {
+Future signUp(formKey) async {
   if (formKey.currentState!.validate()) {
-    print("Cadastro realizado com sucesso");
+    print('Cadastro realizado com sucesso');
     return formKey;
   } else {
-    print("Falha no Cadastro, verifique com o desenvolvedor");
+    print('Falha no Cadastro, verifique com o desenvolvedor');
     return formKey;
   }
 }
 
 //navegação após entrar com os dados
+// ignore: always_declare_return_types
 navigateTo(formKey, context, whereTo) {
   login(formKey);
   if (formKey.currentState!.validate()) {
@@ -36,7 +37,7 @@ navigateTo(formKey, context, whereTo) {
   }
 }
 
-navigateSimple(context, whereTo) {
+Future navigateSimple(context, whereTo) {
   return Navigator.pushReplacement(
     context,
     MaterialPageRoute(builder: (context) => whereTo),

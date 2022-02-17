@@ -9,8 +9,8 @@ class SignWidget extends StatelessWidget {
 
   const SignWidget({
     Key? key,
-    this.textSignMain = "",
-    this.textSignSecond = "",
+    this.textSignMain = '',
+    this.textSignSecond = '',
     this.onPressed,
     this.onTap,
   }) : super(key: key);

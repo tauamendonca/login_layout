@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 //Font Family
-const cFontFamily = "OpenSans";
+const cFontFamily = 'OpenSans';
 
 //Background Image
-var cImage = "assets/images/background.png";
+var cImage = 'assets/images/background.png';
 
 //Colors
 const Color cColorPrimary = Color(0xff435AC2);

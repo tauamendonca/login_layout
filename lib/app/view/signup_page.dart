@@ -49,7 +49,7 @@ class SignUpPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Get Started",
+                      'Get Started',
                       style: cTitleText,
                     ),
                     const SizedBox(
@@ -62,7 +62,7 @@ class SignUpPage extends StatelessWidget {
                         children: [
                           //nome do usuário
                           CustomFieldText(
-                            hintText: "Name",
+                            hintText: 'Name',
                             validator: (value) {
                               return validateName(value);
                             },
@@ -70,7 +70,7 @@ class SignUpPage extends StatelessWidget {
 
                           //email para cadastro
                           CustomFieldText(
-                            hintText: "E-mail",
+                            hintText: 'E-mail',
                             validator: (value) {
                               return validateEmail(value);
                             },
@@ -78,7 +78,7 @@ class SignUpPage extends StatelessWidget {
 
                           //senha
                           CustomFieldText(
-                            hintText: "Password",
+                            hintText: 'Password',
                             validator: (value) {
                               return (validatePassword(value));
                             },
@@ -86,10 +86,10 @@ class SignUpPage extends StatelessWidget {
 
                           //checkbox Termo de compromisso
                           const CustomCheckbox(
-                            textFirst: "I agree to the  ",
-                            textTwo: "Terms of Service",
-                            textTree: "  and  ",
-                            textFour: "Privacy Policy",
+                            textFirst: 'I agree to the  ',
+                            textTwo: 'Terms of Service',
+                            textTree: '  and  ',
+                            textFour: 'Privacy Policy',
                           ),
                         ],
                       ),
@@ -97,8 +97,8 @@ class SignUpPage extends StatelessWidget {
 
                     //botão de SignUp
                     SignWidget(
-                      textSignMain: "Sign Up",
-                      textSignSecond: "Sign In",
+                      textSignMain: 'Sign Up',
+                      textSignSecond: 'Sign In',
                       onTap: () {
                         navigateSimple(context, LoginPage());
                       },

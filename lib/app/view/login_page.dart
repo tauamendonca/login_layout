@@ -49,7 +49,7 @@ class LoginPage extends StatelessWidget {
                   children: [
                     //Título
                     Text(
-                      "Welcome Back",
+                      'Welcome Back',
                       style: cTitleText,
                     ),
 
@@ -64,23 +64,23 @@ class LoginPage extends StatelessWidget {
                         children: [
                           CustomFieldText(
                             // key: _formKey,
-                            hintText: "E-mail",
+                            hintText: 'E-mail',
                             validator: (value) {
                               return validateEmail(value);
                             },
                           ),
                           CustomFieldText(
                             // key: _formKey,
-                            hintText: "Password",
+                            hintText: 'Password',
                             obscureText: true,
                             validator: (value) {
                               return validatePassword(value);
                             },
                           ),
                           const CustomCheckbox(
-                            textFirst: "Remember me",
+                            textFirst: 'Remember me',
                             width: 30,
-                            textLink: "Forgot password?",
+                            textLink: 'Forgot password?',
                           ),
                         ],
                       ),
@@ -89,8 +89,8 @@ class LoginPage extends StatelessWidget {
                       height: 30,
                     ),
                     SignWidget(
-                      textSignMain: "Sign In",
-                      textSignSecond: "Sign Up",
+                      textSignMain: 'Sign In',
+                      textSignSecond: 'Sign Up',
                       onTap: () {
                         navigateSimple(context, SignUpPage());
                       },
