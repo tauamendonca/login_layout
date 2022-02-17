@@ -25,6 +25,8 @@ class CustomFieldText extends StatelessWidget {
       key: key,
       obscureText: obscureText,
       textAlignVertical: TextAlignVertical.bottom,
+
+      //TODO: Fazer o estado do formulário voltar ao azul após uns segundos do erro exibido
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.symmetric(vertical: 12),
         hintText: hintText,

@@ -1,19 +1,26 @@
-// ignore_for_file: always_declare_return_types
-
-validateEmail(value) {
-  if (!value!.contains('@')) {
+String? validateEmail(String? value) {
+  if (value == null || value.isEmpty) {
+    return 'O campo está vazio';
+  } else if (!value.contains('@')) {
     return 'Esse e-mail está incorreto';
   }
+  return null;
 }
 
-validatePassword(value) {
-  if (value!.length < 6) {
+String? validatePassword(String? value) {
+  if (value == null || value.isEmpty) {
+    return 'O campo está vazio';
+  } else if (value.length < 6) {
     return 'A senha deve ter pelo menos 6 caracteres';
   }
+  return null;
 }
 
-validateName(value) {
-  if (value!.length < 5) {
+String? validateName(String? value) {
+  if (value == null || value.isEmpty) {
+    return 'O campo está vazio';
+  } else if (value.length < 5) {
     return 'Esse nome é invalido';
   }
+  return null;
 }
